@@ -1,0 +1,94 @@
+{
+  "_args": [
+    [
+      "gitbook-plugin-language-picker",
+      "C:\\Gitbook\\Import\\langtest"
+    ]
+  ],
+  "_from": "gitbook-plugin-language-picker",
+  "_id": "gitbook-plugin-language-picker@0.1.0",
+  "_inBundle": false,
+  "_inCache": true,
+  "_installable": true,
+  "_integrity": "sha1-Ga6qCN6zlzRdtP1sm9t/Ba/wkT0=",
+  "_location": "/gitbook-plugin-language-picker",
+  "_nodeVersion": "4.1.0",
+  "_npmUser": {
+    "email": "vintproykt@gmail.com",
+    "name": "vintproykt"
+  },
+  "_npmVersion": "2.14.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "escapedName": "gitbook-plugin-language-picker",
+    "fetchSpec": "latest",
+    "name": "gitbook-plugin-language-picker",
+    "raw": "gitbook-plugin-language-picker",
+    "rawSpec": "",
+    "registry": true,
+    "saveSpec": null,
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/gitbook-plugin-language-picker/-/gitbook-plugin-language-picker-0.1.0.tgz",
+  "_shasum": "19aeaa08deb397345db4fd6c9bdb7f05aff0913d",
+  "_shrinkwrap": null,
+  "_spec": "gitbook-plugin-language-picker",
+  "_where": "/Users/oleg/dev/clever-dev",
+  "author": {
+    "email": "vintproykt@gmail.com",
+    "name": "Rodion Borisov"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "GitBook Plugin to add toolbar button with languages dropdown menu. This parses languages from `../index.html` (as you edit in `LANGS.md`).",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "f065c0525ecfb5f4650b6261d3043f00928890e4",
+    "tarball": "https://registry.npmjs.org/gitbook-plugin-language-picker/-/gitbook-plugin-language-picker-0.0.7-0.tgz"
+  },
+  "engines": {
+    "gitbook": ">1.x.x"
+  },
+  "gitbook": {
+    "properties": {
+      "grid-columns": {
+        "default": 3,
+        "max": 10,
+        "min": 1,
+        "title": "Columns count of languages grid",
+        "type": "number"
+      }
+    }
+  },
+  "homepage": "https://www.npmjs.com/package/gitbook-plugin-language-picker",
+  "keywords": [
+    "gitbook",
+    "plugin",
+    "loc",
+    "localization",
+    "lang",
+    "language",
+    "language-picker",
+    "dropdown",
+    "menu"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "vintproykt@gmail.com",
+      "name": "vintproykt"
+    }
+  ],
+  "name": "gitbook-plugin-language-picker",
+  "optionalDependencies": {},
+  "readme": "GitBook Plugin: Language Picker\n===============================\n\n## Usage\n\n1. Update `plugins` in `book.json` file to include `language-picker` plugin.\n\n```\n{\n    \"plugins\": [\n        \"language-picker\"\n    ]\n}\n```\n\n2. Run `gitbook install` in console to install plugins.\n\n3. You'll find \"globe\" icon in toolbar.\n\n## How this works\n\nClick that icon, dropdown menu will show you a grid with references to all languages that you set in root file `LANGS.md`.\n\nAccess to `../index.html` (\"Select language\" page) required, so don't try to retrieve languages *locally* yet.\n\nAfter selecting language browser will be moved to translated version of current page.\n\n## Configuration\n\nYou can set:\n* Columns count of languages grid (`grid-columns`) - (default: `3`).\n\nAdd into `book.json`\n```\n    \"pluginsConfig\": {\n        \"language-picker\": {\n            \"grid-columns\": 3\n        }\n    }\n```\n\n## Why it's not using flags?\n\nThere is dialect and also country division. So I don't want to split languages on both; you can read [other good information about it](https://www.ethnologue.com/about/problem-language-identification) and think about that doing it or not yourself.",
+  "readmeFilename": "README.md",
+  "scripts": {},
+  "version": "0.1.0"
+}
