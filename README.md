@@ -21,20 +21,27 @@ GitBook Plugin: Language Picker
 
 Click that icon, dropdown menu will show you a grid with references to all languages that you set in root file `LANGS.md`.
 
-Access to `../index.html` ("Select language" page) required, so don't try to retrieve languages *locally* yet.
+If `languages` config variable is not set, access to `../index.html` ("Select language" page) required.
 
 After selecting language browser will be moved to translated version of current page.
 
 ## Configuration
 
 You can set:
+
 * Columns count of languages grid (`grid-columns`) - (default: `3`).
+* Languages list, overriding `LANGS.md` list.
 
 Add into `book.json`
-```
+
+```json
     "pluginsConfig": {
         "language-picker": {
-            "grid-columns": 3
+            "grid-columns": 3,
+            "languages": [
+                ["en", "English"],
+                ["ru", "Russian"]
+            ]
         }
     }
 ```

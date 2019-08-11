@@ -23,8 +23,12 @@ function languagePickerGrid(gitbook, elem, maxColumns, langData) {
 	}
 	elem.append(table);
 }
-function parseLanguages(gitbook, elem, maxColumns, cb) {
-	if (location.protocol == "file:") {
+function parseLanguages(gitbook, elem, opts, maxColumns, cb) {
+	if (opts.languages) {
+		var langData = opts.languages;
+		languagePickerGrid(gitbook, elem, maxColumns, langData);
+		cb(elem);
+	} else if (location.protocol == "file:") {
 		var langData = [];
 		langData.push(["en", "English"]);
 		languagePickerGrid(gitbook, elem, maxColumns, langData);
@@ -59,7 +63,7 @@ require(["gitbook", "jQuery"], function(gitbook, $) {
 		$(function() {
 			var DDMenu_selector = ".language-picker .dropdown-menu";
 			$(document).one("click", ".language-picker .btn", function(e) {
-				parseLanguages(gitbook, $(DDMenu_selector), opts["grid-columns"], function(elem) {
+				parseLanguages(gitbook, $(DDMenu_selector), opts, opts["grid-columns"], function(elem) {
 					elem.addClass("language-picker-grid");
 					elem.trigger("parsedContent");
 				});
