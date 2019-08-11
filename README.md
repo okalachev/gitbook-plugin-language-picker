@@ -8,7 +8,7 @@ GitBook Plugin: Language Picker
 ```
 {
     "plugins": [
-        "language-picker"
+        "language-picker@https://github.com/okalachev/gitbook-plugin-language-picker.git"
     ]
 }
 ```
